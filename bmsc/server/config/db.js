@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://bms1:test123@cluster0.4aympzf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {});
+mongoose.connect(process.env.MONGO_URL, {});
 
 const connection = mongoose.connection;
 
