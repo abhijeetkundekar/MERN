@@ -1,6 +1,5 @@
 import "./App.css";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Home from "./pages/home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -10,6 +9,7 @@ import Profile from "./pages/Profile";
 import Admin from "./pages/Admin";
 import Partner from "./pages/Partner";
 import Movie from "./pages/Movie";
+import Home from "./pages/Home";
 
 function App() {
   return (
