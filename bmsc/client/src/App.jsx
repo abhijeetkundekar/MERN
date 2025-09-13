@@ -9,6 +9,7 @@ import Profile from "./pages/Profile";
 import Admin from "./pages/Admin";
 import Partner from "./pages/Partner";
 import Movie from "./pages/Movie";
+import BookShow from "./pages/BookShow";
 import Home from "./pages/Home";
 
 function App() {
@@ -23,6 +24,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <Movie />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/book-show/:showId"
+            element={
+              <ProtectedRoute>
+                <BookShow />
               </ProtectedRoute>
             }
           />
