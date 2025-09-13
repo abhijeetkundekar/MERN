@@ -30,8 +30,7 @@ function ProtectedRoute({ children }) {
                     dispatch(SetUser(response.data));
                     dispatch(hideLoading());
                 }
-            } catch (error) {
-                console.log(error);
+            } catch (err) {
                 dispatch(SetUser(null));
             }
         };
@@ -47,6 +46,9 @@ function ProtectedRoute({ children }) {
         {
             label: "Home",
             icon: <HomeOutlined />,
+            onClick: () => {
+                navigate("/");
+            }
         },
         {
             label: `${!user ? user.name : ""}`,

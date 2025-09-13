@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Tabs } from "antd";
 import TheatreList from "./TheatreList";
+import { useNavigate } from "react-router-dom"
 
 function Partner() {
     const { user } = useSelector((state) => state.user);
+    const navigate = useNavigate();
     const tabItems = [
         {
             key: "1",
