@@ -44,17 +44,18 @@ function ProtectedRoute({ children }) {
 
     const navItems = [
         {
+            key: "home",
             label: "Home",
             icon: <HomeOutlined />,
-            onClick: () => {
-                navigate("/");
-            }
+            onClick: () => navigate("/"),
         },
         {
-            label: `${!user ? user.name : ""}`,
+            key: "user",
+            label: user ? user.name : "",   // fixed conditional
             icon: <UserOutlined />,
             children: [
                 {
+                    key: "profile",
                     label: (
                         <span
                             onClick={() => {
@@ -73,6 +74,7 @@ function ProtectedRoute({ children }) {
                     icon: <ProfileOutlined />,
                 },
                 {
+                    key: "logout",
                     label: (
                         <Link
                             to="/login"
@@ -89,6 +91,7 @@ function ProtectedRoute({ children }) {
             ],
         },
     ];
+
 
     return (
         <div>

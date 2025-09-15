@@ -2,6 +2,7 @@ const Theatre = require("../models/theatreModel");
 
 const addTheatre = async (req, res) => {
   try {
+    console.log(req.body);
     const newTheatre = new Theatre(req.body);
     await newTheatre.save();
 

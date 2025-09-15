@@ -109,8 +109,10 @@ const TheatresTable = () => {
 
     return (
         <>
-            {theatres && theatres.length > 0 && (
+            {theatres && theatres.length > 0 ? (
                 <Table dataSource={theatres} columns={columns} />
+            ) : (
+                <div>No theatres found.</div>
             )}
         </>
     );
